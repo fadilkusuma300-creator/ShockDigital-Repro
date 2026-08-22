@@ -1,0 +1,67 @@
+font_family: sans
+base_size: 10
+colors:
+  primary: '#1f4e79'
+  band: '#d9e7f3'
+  zero: '#6f6f6f'
+  threshold: '#6f6f6f'
+  shock: '#e31a1c'
+  treatment: '#0b45d8'
+  teal: '#078b8b'
+fig1:
+  width_in: 16.5
+  height_in: 9.28
+  dpi_preview: 180
+  title_font_size: 17
+  time_font_size: 15
+  section_font_size: 13
+  body_font_size: 10.5
+  bottom_heading_font_size: 10.4
+fig2:
+  width_in: 7.5
+  height_in: 4.8
+  x_min: 0
+  x_max: 80
+  x_break: 10
+  y_min: -2
+  y_max: 12
+  y_break: 2
+  show_threshold_point: true
+  zero_line_width: 0.38
+  band_alpha: 0.72
+  line_width: 0.85
+  threshold_line_width: 0.55
+  threshold_point_size: 1.9
+fig3:
+  width_in: 8.0
+  height_in: 4.2
+  x_min: -2.2
+  x_max: 9.6
+  label_digits: 1
+  zero_line_width: 0.45
+  errorbar_height: 0.13
+  errorbar_line_width: 0.65
+  point_size: 2.3
+  label_size: 3.05
+fig4:
+  width_in: 10.5
+  height_in: 3.9
+  x_min: 20
+  x_max: 80
+  x_break: 20
+  y_min: -1.5
+  y_max: 5.2
+  reference_shock: 50
+  zero_line_width: 0.34
+  reference_line_width: 0.45
+  band_alpha: 0.72
+  line_width: 0.72
+theme:
+  grid_line_width: 0.25
+  grid_color: '#d9d9d9'
+  plot_margin_pt:
+  - 6
+  - 8
+  - 6
+  - 8
+  legend_position: bottom

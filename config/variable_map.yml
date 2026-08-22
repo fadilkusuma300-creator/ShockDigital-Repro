@@ -1,0 +1,387 @@
+baseline:
+  firm_id:
+    candidates:
+    - idstd
+    - id
+    - firm_id
+    - enterprise_id
+    - establishment_id
+    label_regex:
+    - questionnaire number
+    - establishment.*id
+    - enterprise.*id
+  survey_weight:
+    candidates:
+    - wt
+    - weight
+    - sampling_weight
+    - wmedian
+    - wmedian_ES
+    - wmedian_es
+    label_regex:
+    - sampling weight
+    - probability weight
+  strata:
+    candidates:
+    - strata
+    - stratification
+    - stratum
+    label_regex:
+    - stratification
+    - sampling stratum
+  baseline_employment:
+    candidates:
+    - l1
+    - employment
+    - full_time_workers
+    label_regex:
+    - permanent.*full[- ]time.*workers.*last fiscal year
+    - full[- ]time.*employees.*last fiscal year
+  establishment_year:
+    candidates:
+    - b5
+    - year_started
+    - establishment_year
+    label_regex:
+    - year.*establishment.*began operations
+    - year.*started operations
+  manager_experience:
+    candidates:
+    - b7
+    - manager_experience
+    - top_manager_experience
+    label_regex:
+    - top manager.*years.*experience
+    - years.*manager.*experience
+  website:
+    candidates:
+    - c22b
+    - website
+    - own_website
+    label_regex:
+    - own website
+    - website or social media
+  foreign_ownership_share:
+    candidates:
+    - b2b
+    - foreign_ownership
+    - private_foreign
+    label_regex:
+    - private foreign.*ownership
+    - foreign.*owned
+  direct_export_share:
+    candidates:
+    - d3c
+    - direct_exports
+    label_regex:
+    - direct exports
+  indirect_export_share:
+    candidates:
+    - d3b
+    - indirect_exports
+    label_regex:
+    - indirect exports
+  credit_constraints:
+    candidates:
+    - credit_constrained
+    - credit_constraints
+    label_regex:
+    - credit constrained
+    - credit constraint
+  loan_applied:
+    candidates:
+    - k16
+    label_regex:
+    - did.*apply.*loans.*lines of credit
+    - apply for any loans or lines of credit
+  loan_noapply_reason:
+    candidates:
+    - k17
+    label_regex:
+    - main reason.*did not apply.*loan
+    - reason.*not apply.*line of credit
+  loan_application_outcome:
+    candidates:
+    - k20a1
+    - k20
+    label_regex:
+    - outcome.*most recent application
+    - application was approved in full
+  wc_bank_combined:
+    candidates:
+    - k3bc
+    label_regex:
+    - working capital.*borrowed from banks
+  wc_bank_private:
+    candidates:
+    - k3b
+    label_regex:
+    - working capital.*private.*bank
+  wc_bank_state:
+    candidates:
+    - k3c
+    label_regex:
+    - working capital.*state.*bank
+  wc_nonbank:
+    candidates:
+    - k3e
+    label_regex:
+    - working capital.*non-bank financial
+  wc_supplier_credit:
+    candidates:
+    - k3f
+    label_regex:
+    - working capital.*suppliers.*customers
+  wc_other_external:
+    candidates:
+    - k3hd
+    - k3h
+    label_regex:
+    - working capital.*moneylenders.*friends.*relatives
+    - working capital.*other.*finance
+  fa_bank_combined:
+    candidates:
+    - k5bc
+    label_regex:
+    - fixed assets.*borrowed from banks
+  fa_bank_private:
+    candidates:
+    - k5b
+    label_regex:
+    - fixed assets.*private.*bank
+  fa_bank_state:
+    candidates:
+    - k5c
+    label_regex:
+    - fixed assets.*state.*bank
+  fa_nonbank:
+    candidates:
+    - k5e
+    label_regex:
+    - fixed assets.*non-bank financial
+  fa_supplier_credit:
+    candidates:
+    - k5f
+    label_regex:
+    - fixed assets.*suppliers.*customers
+  fa_other_external:
+    candidates:
+    - k5hdj
+    - k5h
+    - k5j
+    label_regex:
+    - fixed assets.*moneylenders.*friends.*relatives
+    - fixed assets.*other.*finance
+  fa_equity:
+    candidates:
+    - k5i
+    label_regex:
+    - fixed assets.*owners.*contribution
+    - fixed assets.*equity shares
+  innovation:
+    candidates:
+    - h1
+    - innovation
+    - innovator
+    - product_innovation
+    label_regex:
+    - introduced.*new.*product
+    - product innovation
+    - innovation
+  industry:
+    candidates:
+    - industry
+    - sector
+    - isic
+    - isic_rev4
+    - a4a
+    label_regex:
+    - industry
+    - sector
+    - isic
+  economy:
+    candidates:
+    - economy
+    - country
+    - countryx
+    - country_name
+    - economy_name
+    label_regex:
+    - economy
+    - country
+  interview_year:
+    candidates:
+    - year
+    - survey_year
+    - a14y
+    - interview_year
+    label_regex:
+    - interview year
+    - survey year
+followup:
+  firm_id:
+    candidates:
+    - idstd
+    - id
+    - firm_id
+    - enterprise_id
+    - establishment_id
+    label_regex:
+    - questionnaire number
+    - establishment.*id
+    - enterprise.*id
+  survey_weight:
+    candidates:
+    - wt
+    - weight
+    - covid_weight
+    - covwt
+    - wfinal
+    - wmedian_COVID
+    - wmedian_covid
+    label_regex:
+    - sampling weight
+    - covid.*weight
+    - probability weight
+  strata:
+    candidates:
+    - strata
+    - stratification
+    - stratum
+    label_regex:
+    - stratification
+    - sampling stratum
+  economy:
+    candidates:
+    - economy
+    - country
+    - countryx
+    - country_name
+    - economy_name
+    label_regex:
+    - economy
+    - country
+  round:
+    candidates:
+    - round
+    - survey_round
+    - covid_round
+    - covround
+    label_regex:
+    - survey round
+    - follow[- ]up round
+  interview_year:
+    candidates:
+    - year
+    - survey_year
+    - interview_year
+    - covyear
+    - COVa20y
+    - cova20y
+    - a14y
+    label_regex:
+    - interview year
+    - survey year
+  interview_month:
+    candidates:
+    - month
+    - interview_month
+    - covmonth
+    - COVa20m
+    - cova20m
+    - a14m
+    label_regex:
+    - interview month
+  operating_status:
+    candidates:
+    - COVb0
+    - covb0
+    label_regex:
+    - currently.*open.*temporarily closed.*permanently closed
+  sales_direction:
+    candidates:
+    - COVb2a
+    - covb2a
+    label_regex:
+    - sales.*increase.*remain the same.*decrease
+  sales_increase_pct:
+    candidates:
+    - COVb2b
+    - covb2b
+    label_regex:
+    - percentage.*sales.*increase
+    - by what percentage.*sales increase
+  sales_decrease_pct:
+    candidates:
+    - COVb2c
+    - covb2c
+    label_regex:
+    - percentage.*sales.*decrease
+    - by what percentage.*sales decrease
+  demand_state:
+    candidates:
+    - COVc2b
+    - covc2b
+    label_regex:
+    - demand.*products.*services
+  input_supply_state:
+    candidates:
+    - COVc2c
+    - covc2c
+    label_regex:
+    - supply.*inputs.*raw materials
+    - supply.*input
+  cash_flow_state_round1:
+    candidates:
+    - COVe1a
+    - cove1a
+    label_regex:
+    - liquidity or cash flow
+  cash_flow_state_later:
+    candidates:
+    - COV2e1a
+    - cov2e1a
+    - COV3e1a
+    - cov3e1a
+    - COV4e1a
+    - cov4e1a
+    label_regex:
+    - liquidity or cash flow.*previous round
+  online_adjust_round1:
+    candidates:
+    - COVc4a
+    - covc4a
+    label_regex:
+    - started or increased business activity online
+  online_adjust_later:
+    candidates:
+    - COV2c4a
+    - cov2c4a
+    - COV3c4a
+    - cov3c4a
+    - COV4c4a
+    - cov4c4a
+    label_regex:
+    - started or increased online business activity.*previous round
+  employment_current:
+    candidates:
+    - COVd1
+    - covd1
+    label_regex:
+    - permanent.*full[- ]time employees.*last month
+coding:
+  true: 1
+  false: 2
+  increase: 1
+  same: 2
+  decrease: 3
+  permanently_closed: 1
+  temporarily_closed: 2
+  open: 3
+  missing_codes:
+  - -9
+  - -99
+  - -8
+  - -7
+  - -6
+  - -5

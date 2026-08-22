@@ -1,0 +1,81 @@
+seed: 20260820
+
+paths:
+  baseline_dir: data/raw/baseline
+  followup_dir: data/raw/followup
+  derived_dir: data/derived
+  results_dir: results
+
+sample:
+  min_baseline_employment: 5
+  max_baseline_employment: 249
+  severe_shock_cutoff: 50
+  propensity_lower: 0.02
+  propensity_upper: 0.98
+  strict_propensity_lower: 0.10
+  strict_propensity_upper: 0.90
+  primary_curve_min: 0
+  primary_curve_max: 80
+  shock_grid_step: 1
+
+cross_fitting:
+  outer_folds: 5
+  inner_validation_fraction: 0.20
+  stratify_by_economy_and_treatment: true
+
+nuisance_models:
+  propensity:
+    num_trees: 1500
+    min_node_size: 10
+    mtry_fraction: 0.50
+  elastic_net:
+    alpha: 0.50
+    nlambda: 100
+  ridge:
+    alpha: 0.00
+    nlambda: 100
+  xgboost:
+    nrounds: 500
+    eta: 0.03
+    max_depth: 4
+    min_child_weight: 10
+    subsample: 0.80
+    colsample_bytree: 0.80
+    early_stopping_rounds: 40
+
+second_stage:
+  spline_knot_probs: [0.10, 0.25, 0.50, 0.75, 0.90]
+  spline_degree: 3
+  inner_folds: 3
+  lambda_spline_grid: [0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000]
+  lambda_economy_grid: [0.1, 1, 10, 100]
+  lambda_industry_grid: [0.1, 1, 10, 100]
+
+inference:
+  cluster_variable: economy
+  pointwise_level: 0.95
+  wild_cluster_replications: 999
+  bootstrap_distribution: rademacher
+  sustained_support_adjacent_points: 2
+
+validation:
+  repetitions: 100
+  treatment_share_target: 0.24
+  residual_shock_quintiles: 5
+  grf_num_trees: 2000
+  causalpfn_query_draws_per_grid: 1024
+  causalpfn_ci_samples: 1000
+  smooth_transition:
+    center_range: [40, 65]
+    width_range: [12, 24]
+    plateau_range: [4, 8]
+  sharp_jump:
+    location_range: [35, 65]
+    effect_range: [3.5, 7.5]
+  linear_change:
+    total_effect_range: [3, 7]
+
+runtime:
+  parallel_cores: 1
+  save_intermediate: true
+  strict_mapping: true

@@ -1,0 +1,22 @@
+# Third-party microdata
+data/raw/**
+!data/raw/
+!data/raw/baseline/
+!data/raw/followup/
+!data/raw/baseline/.gitkeep
+!data/raw/followup/.gitkeep
+
+# Generated analysis files
+data/derived/
+results/
+logs/
+
+# R/Python local state
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
